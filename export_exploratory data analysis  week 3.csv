@@ -1,0 +1,25 @@
+"Three ways to define closeness of data points?","- euclidean distance (linear point-to-point)
+- correlation similarity
+- manhattan distance (binary)"
+"For what is euclidean distance appropriate?","For high-dimensional distances (as you can add unlimited dimension in your calculation quite simply)"
+"What is the input for hClustering?","the distance table calculated by the dist() function!"
+"What is K-means clustering?","A partitioning approach for a fix number of clusters (the function regroups them into clusters)"
+"What is SVD?","Singular Value Decomposition (for dimension reduction in matrices)"
+"What is PCA","Principal Components Analysis"
+"What kinds of linkage between clusters exist?","Extreme linkage : between most remote points 
+
+Complete linkage : between the center of gravity of each cluster"
+"What are the basic steps in producing a dendogram?","- matrix of coordinates (e.g. x and y coordinates for each point)
+- produce matrix of distances with dist() function
+- hierarchical cluster map by using hclust() function"
+"What is a lower-rank matrix?","A matrix with fewer variables."
+"What is PCA?","principle component analysis. It returns the right singular vector of the singular value decomposition (SVD) procedure"
+"Can you run a SVD on a dataset containing missing values?","No, you cannot run a SVD on missing values."
+"How to run a SVD on a dataset containing missing values?","use impute (bioconductor package)"
+"How does scaling of a matrix work?","This means to subtract the column mean from every element and divide the result by the column standard deviation."
+"Name a great package including improved color palettes!","grDevices  allows to use palettes of colors and color interpolation"
+"Which function shows all available colors?","the  colors()  function - no argument required."
+"Which are the 3 types of palettes?","-  sequential  : e.g. from low to high
+-  diverging  : to show values diverging from another value
+-  qualitative  : not ordered"
+"Which package offers great palettes?","the  RColorBrewer  package!"

@@ -1,0 +1,4 @@
+"SVD : from S, V and U which one contains the right singular vector?","Right singular vectors are stored in V"
+"SVD : from S, V and U which one contains the left singular vector?","Left singular vectors are stored in U"
+"SVD : from S, V and U which one contains the singular values?","S has singular values and is diagonal"
+"How to find the maximum contributor in a matrix?","By running a SVD and choosing the highest value in the right singular vector --> use which.max(svd$v)"

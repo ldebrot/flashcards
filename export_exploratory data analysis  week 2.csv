@@ -1,0 +1,37 @@
+"For what is the Lattice Plot system optimized?","For high-density plots"
+"What is the one critical difference between the lattice and the base graphic systems?","- Lattice graphic functions return a trellis object.whereas the basic system prints the plot directly on the graphics device
+- The print methods for lattice actually plots the trellis object on the graphic device.
+(on the command line, trellis objects are auto-printed)"
+"Can you use functions of the base system to add text captions in lattice?","No, you cannot mix functions of different graphic systems"
+"What are the four characteristics of the Lattice system?","- plots constructed by a single function call
+- margins and spacing handled automatically
+- ideal for creating conditioning plots (same plot under different conditions)
+- panel functions allow to customy each panel"
+"What is ggplot2?","- an implementation of the grammar of graphics (Wilkinson)
+- Written by Hadley Wickham (Iowa State)
+- 3rd graphics system"
+"What does Leland Wilkinson say in Grammar of Graphics?","""Shorten the distance from mind to page"""
+"What is a statistical graphic according to Leland Wilkinson?","""A mapping from data to aesthetic attributes (colour, shape, size) of geometric objects (points, lines, bars)"""
+"What are the four characteristics of qplot()?","- analog to plot() with many built-in features
+- Syntex between base and lattice
+- nice, publication-ready graphics
+- low customization of graphic aspects (go for ggplot2)"
+"What are the basic components of a ggplot2 plot?","- data frame
+- aesthetic mappings
+- geoms
+- facets
+- stats
+- scales
+- coordinate system"
+"How are ggplot2 plots built?","Ggplot2 plots are built in layers:
+- plot the data
+- overlay a summary
+- metadata & annotation"
+"How do you get a quick overview of your ggplot?","by saving it into a variable and calling summary() on it"
+"Which are the 7 basic components of GGplot2?","- Data frame
+- aesthetic mapping (how data are mapped)
+- geoms (geometric objects)
+- facets (ex. pannels)
+- stats (e.g. quantiles)
+- scale (coding used by aesthetic mapping)
+- coordinate system"

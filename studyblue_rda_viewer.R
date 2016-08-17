@@ -25,20 +25,22 @@ errmsg2 <- "ERROR 2 - Something went wrong with the identification of the starti
 errmsg3 <- "ERROR 3"
 errmsg4 <- "ERROR 4"
 
+
 # File choice
 cat("\n *** \n \n Available RDA files in your working directory : \n")
-print(dir(pattern=".Rda")) # Show csv files in working directory
+filepattern <- "\\.Rda$" # Define file extension pattern
+print(dir(pattern=filepattern)) # Show csv files in working directory
 cat("\n Which file do you want to view? \n")
 x <- (readline()) # Ask for input
 
 # Check user input
 if(is.na(as.numeric(x))) stop(errmsg1) 
 x<-as.numeric(x)
-if(x>length(dir(pattern=".Rda")) || x<1) stop(errmsg1)
+if(x>length(dir(pattern=filepattern)) || x<1) stop(errmsg1)
     
 # If input correct (=corresponding to an actual file), load file
 fnumber <- x
-fcname <- dir(pattern=".Rda")[fnumber]
+fcname <- dir(pattern=filepattern)[fnumber]
 load(fcname)
 fcards$type <- as.character(fcards$type)
 fcards$content <- as.character(fcards$content)
