@@ -1,0 +1,15 @@
+"What does a data scientist do?","define the question, define the ideal data set, determine what data you can access, obtain the data, clean the data, exploratory data analysis, statistical prediction, interpret results, challenge results, synthetize results, create reproductible code, distribute results to other people."
+"What is the command to find the right help file on R?","?keyword"
+"What is the command to retrieve help search on R?","help.search(""keyword"")"
+"How do you get arguments on R?","args(""keyword"")"
+"What is the command to get the code of a function on r?","just type the keyword"
+"How to ask an R question?","- What steps will reproduce the problem?
+- What is the expected output?
+- What do you see instead?
+- What version of the program are you using?
+- What operating system?"
+"How to ask a data analysis question?","- What is the question you are trying to answer?
+ - What steps/tools did you use to answer it?
+ - What did you expect to see?
+ - What do you see instead?
+ - About what other solutions have you thougt?"

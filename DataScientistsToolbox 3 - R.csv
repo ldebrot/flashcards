@@ -1,0 +1,18 @@
+"R: how to show packages available for download?","r function: available.packages()
+
+ 
+to import into var: a <- available.packages()
+
+ 
+to show first three of a: head(rownames(a), 3)"
+"r: how to use r packages once they are installed?","you need to load the required packages into the libraries first. r function: library(nameofpackage) -  do not use quotation marks"
+"r: how to install an r package?","r command :  install.packages(""nameofpackage"")"
+"r: how to install mulitple packages?","install.packages(c(""packagename1"",  ""packagename2""))"
+"r: how to install packages from another source?","r command: 
+1) source(""url"")
+2) url()
+
+
+or 2) url(c(""packagename1"", "" packagename2"" ))"
+"r: how to check which functions were loaded?","after using library(""""), r command:
+  search()"

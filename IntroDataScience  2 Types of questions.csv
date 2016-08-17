@@ -1,0 +1,29 @@
+"What kind of Data science questions exist?","- Descriptive
+- Exploratory
+- Inferential
+- Predictive
+- Causal
+- Mechanistic"
+"What is the goal of descriptive data analyse?","Describe a data set (for example census data, no interpretation, no generalization or prediction)"
+"What is the goal of exploratory analysis?","Find relationships you didn't know about
+
+- discover new connections
+- exploratory analysis are rarely the final say"
+"Does correlation imply causation?","No, correlation does not imply causation!"
+"What is the goal of inferential analysis?","Use a small sample of data to say something about a bigger data set
+
+- Inference is commonly the goal of statistics
+- Inference is about estimating the quantity
+- Inference is also about estimating the uncertainty
+- Inference depends heavily on the population and the sample scheme (group of people or objects)"
+"What is the goal of predictive data analysis?","Use the data on one object to predict values of another object"
+"On what does prediction depend heavily?","On measuring the right variables (vs. population/objects chosen)"
+"What works best with prediction?","1) A simple model
+2) A large data set"
+"If x predicts y, does x cause y?","No."
+"What is the goal of causal data analysis?","To know how the change of one variable impacts another variable."
+"Do causual relationships every object or individual?","No, it only describes average effects."
+"What kind of studies are required to identify causation?","Randomized studies"
+"What is the goal of mechanistic analysis?","To understand the exact changes in variables that lead to changes in another variable."
+"Where is mechanistic analysis used?","In physical or engineering science, one can use mechanistic analysis by a deterministic set of equations."
+"What is the only random component in mechanistic data analysis?","Measurement error."

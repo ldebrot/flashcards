@@ -1,0 +1,25 @@
+"CLI command pwd?","shows the  P ath of the  W orking  D irectory"
+"what is the structure of a command in the cli?","command flag argument
+ command = command
+ flag = options, preceded by a -
+ argument = designates what is going to be handled"
+"CLI: clear command?","clears all the commands in the CLI"
+"CLI: ls command?","LS lists files and folders
+ flags: a (hidden&unhidden) L (details)"
+"CLI: what does CD do without any argument?","it brings you to thr home directory"
+"CLI: command TOUCH?","creates an empty file (not directory!)"
+"CLI: what is the structure of the copy command?","CP filename destinationdirectory"
+"CLI: how to copy directories?","command: cp
+ flag: -r
+ arguments: origindirectory destinationdirectory"
+"CLI: how to delete files?","command: rm
+ argument: filetoberemoved"
+"CLI: how to delete all files in a directory ?","command: rm
+ flag: r
+ argument: targetdirectory"
+"CLI: how to place an existing file into another directory?","command: mv
+ arguments: targetfile destinationdirectory"
+"CLI: which command should be used to rename a file?","command: mv
+ arguments: targetfile renamedfilename (should not match with the name of an existing directory)"
+"CLI: how to show the content of a variable ?","command: echo
+ argument: name of the variable"

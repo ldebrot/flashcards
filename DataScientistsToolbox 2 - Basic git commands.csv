@@ -1,0 +1,16 @@
+"Git : How to add all new files to the index?","git command :  git add . 
+ or  git add -u  to update tracking for files that changed names or were deleted
+ or  git add -A  which does both"
+"Which are the four levels of version control, beginning with your workspace?","Workspace  : actual files on the computer
+  Index  : files monitored by Git
+  Repository  : saved versions of monitored files
+  Remote repository  : saved versions of monitored files - but online (Git Hub)"
+"How to add a message to a commit?","Git command : git commit -m ""Blablabla"""
+"How can one edit a version without changing it for all users?","Git command :  git checkout -b branchname 
+ --> the flag -b stands for branch"
+"How to see in which branch one is?","git command :  git branch"
+"How to switch from a branch version to the master version?","Git command :  git checkout master"
+"What happens when one does a pull request?","The owner of the github receives a request and can decide whether or not to import the branch.
+
+ 
+This is a git hub feature (not git)"

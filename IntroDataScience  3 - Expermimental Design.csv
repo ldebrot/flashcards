@@ -1,0 +1,13 @@
+"What are the four characteristics of a good experiment?","- have replication
+- measure variability
+- generalize the problem you care about
+- are transparent"
+"What is a confounder?","A variable that influences two variables but was invisible at first (literacy depends on feet size --> literacy and feet size both depend on age)"
+"How to deal with confounders?","You can fix a variable, stratify it (given set of values like ""green, red, blue, etc.) or randomize it"
+"What is sensitivity in prediction key quantities?","Probability that you have a positive test if you have a disease"
+"What is specificity in predicting key quantities?","Probability that you have a negative test while actually having no disease)"
+"What is the positive predictive value in predicting key quantities?","The probability of True positive (that you actually have a disease if you had a positive test)
+
+negative predictive value --> how sure can you be about not having a disease if you had a negative test"
+"What is accuracy in predicting key quantities?","Accuracy expresses the average probability of correct outcome (negative AND positive predictive value)"
+"What is data dredging?","Use of data mining to uncover patterns in data that can be presented as statistically significant, without first devising a specific hypothesis as to the underlying causality."
