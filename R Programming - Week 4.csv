@@ -1,0 +1,19 @@
+"For what is the str() function used?","To see what is in an object (object type, data type, number of observations, etc.)"
+"What is the variance?","variance  measures how far a set of numbers is spread out"
+"Why would you want to generate the same random numbers and how?","By setting the seed : set.seed(anynumber)
+--> choose the same number
+
+Why? Because you might want to check your functions with the same set of random numbers."
+"For what do r, d, p and q stand in stats functinos (rnorm, dnorm, etc.)","r = generate random numbers
+d = calculate density
+p = evaluate cumulative distribution
+q = evaluates quantile distribution"
+"What is profiling?","It is evaluating the speed of your code in a systematic way (how much time is needed to run through the code)"
+"Why should you go for systematic profiling?","- useful to optimize your code
+- better than guessing
+- estimate the time needed for larger operations (code runs fine on one object, but what about 1000 objects?)"
+"What does system.time() give you?","the user time (time used by CPUs)
+the elapsed time (time experienced by the user of the programme)"
+"How to start the R profiler?","Rprof()"
+"How to show the data collected by the R profiler in a readable way?","summaryRprof()"
+"Can Rprof and system.time be used simultaneously?","No. They don't like each other."

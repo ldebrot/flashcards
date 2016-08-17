@@ -1,0 +1,53 @@
+"How can one remove NA values from a column while using the mean function?","Use the na.rm argument!"
+"In which order does argument matching work?","1st) exact match for named argument
+2nd) partial match
+3rd) positional match"
+"What does lazy evaluation in functions mean?","It means that only the arguments actually used are evaluated by R.  The function works as long as there is no error. Ex:
+f <- function(a, b) {
+a^2
+}"
+"When is the ""..."" argument necessary in functions?","When the number of arguments passed to the function cannot be known in advance. 
+E.g. mean(), paste(), etc.
+Or when you extend the arguments of a function."
+"When does partial matching of function arguments not apply?","Any arguments following the ""..."" argument must be named explicitly (= they cannot be matched partially)"
+"How to list objects in your local workspace?","Use ls()"
+"How to show current working directory in r?","getwd()"
+"How to show files in a directory?","list.files() or dir()"
+"How to set working directory?","Setwd()"
+"How to create files and directories?","file.create() and dir.create()"
+"How to check whether a file exists?","Use function file.exists()"
+"How to get the size of a file?","file.info(""..."")$size"
+"How to remove a directory?","Function unlink()"
+"Why does the order of the packages in the search() list matter?","Because R searches for the values bound to a symbol (which might be a function) in the order of the search() list.
+.globalenvironment = workspace is always first
+package:base is always last"
+"In what position is set a package in the search() list when loaded by the user?","In the 2nd position."
+"Can there be a function and an object with the same name in the workspace environment?","No. But there can be an object and a function with the same name (symbol) if they are loaded in different workspaces (e.g. ""c"")"
+"What scoping rules does R use?","- R uses lexical or static scoping (vs. dynamic scoping)"
+"For what is lexical scoping useful?","For simplying statistical computations."
+"What is a free variable?","It is a variable used in a function, but not defined in the header. (vs. formal argument)"
+"What does Lexical scoping in R mean?","The values of free variables are searched for in the environment in which the function was defined."
+"What is a function closure?","A function and an environment"
+"Which environment has not any parent environment?","The empty environment."
+"When does R tell you that it has not found a value for this symbol?","After searching through all environments, from the workspace down through the parent environments to the empty environment without finding a value bound to the symbol."
+"When do R's scoping rules really matter?","When a function is defined within another function.
+This means that free variables will be searched for in the environment in which the used function is defined."
+"Can functions return functions?","Yes. (unlike in C)"
+"Which languages support lexical scoping?","R
+Scheme
+Perl
+Python
+Common Lisp"
+"Which are the two consequences of lexical scoping?","-All objects must be stored i memory
+-All function must carry a pointer to their respective defining environments"
+"Which are the basic coding standards?","- use text editor
+- indent code
+- Limit the width of your code
+- Limit the length of your function (to one basic activity)"
+"Which are the classes of  dates  and  times ?","Dates :  date  class
+Times :  POSIXct  or   POSIXlt   classes"
+"How are dates and times stored?","Dates : number of days since 1970/01/01
+Times : number of seconds since 1970/01/01"
+"How are times stored in POSIXct and POSIXlt classes?","POSIXct --> as a large integer
+POSIXlt --> as a list (sec, min, hour, mday, mon, year, wday, yday, isdst)"
+"Which function allows you to transform a character string into an actual time (POSIXlt class)?","strptime (datestring, ""%B...."")"

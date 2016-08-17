@@ -1,0 +1,44 @@
+"What does  lapply  do?","It loops over a list and evaluates a function on each element."
+"What does  sapply  do?","It loops over a list and evaluates a function on each element while trying to simplify the result:
+- instead of systematically returning a list
+- it returns a vector if every element is length 1
+- it returns a matrix if every element is a vector of the same length (<1)"
+"What does  apply  do?","It applies a function over the margins of an array.
+For instance : collapse all rows in a column and return values per columns
+OR collapse all columns in a row and return values per row"
+"What does  tapply  do?","It applies a function over subsets of a vector."
+"What does  mapply  do?",""
+"What does the function  split()  do?","It splits objects into sub-pieces"
+"How does one pass on arguments of a function used in lapply?","You add it as arguments of the lapply function:
+lapply (x, FUN, arg1, arg2)"
+"What happens to an object used in lapply when it's not a list?","It is coerced to a list.
+
+What comes out of lapply is always a list!
+
+However, the names are preserved."
+"What is the apply() function equivalent to rowSums()?","apply(x, 1, sum)
+1 = 1st dimension = rows
+2 = 2nd dimension = columns"
+"How can one collapse only the third dimension of an array when using  apply ?","apply(array, c(1,2), function)"
+"When using rowMeans : How can you calculate the means of two dimensions of an array while collapsing the third?","rowMeans(a, dims =2)
+
+Yes, you can use rowMeans for an array!"
+"How do you define the subsets within a vector when using  tapply ?","By creating a factor or list of factors (same length as the vector).
+E.g. the first half of values (subset A) has value 1, the second half value 2."
+"Why is the split function so useful?","Because it splits objects into subpieces allowing you to use any type of function (lapply, sapply, etc.)"
+"Do you need to you interaction() to combine two factors when using split?","No, that's the beauty of it:
+split(x, list(f1, f2))"
+"How to exclude empty levels created by split() with two factors?","add argument drop = TRUE
+E.g. split(x, list(f1, f2), drop=TRUE)"
+"Which are the 5 basic debugging tools in R?","- traceback : prints out the function call stack after an error
+- debug : flags a function for debug mode (one line at a time)
+- browser : suspends the execution of a function wherever it is called and puts it into debug mode
+- trace : allow to insert debugging code into a function
+- recover : allow to modify the error befavior in order to browse the function call stack"
+"what is the difference between the browser and the debug function?","The debug function goes into browser mode right from the beginning of the function.
+The browser function goes into browser mode only once it is calles (e.g. within a function)"
+"How is recovery function handy?","It goes into browser mode as soon as an error comes up (rather than having the console printing an error message)"
+"How can you create a vector of indices (factor) based on a logical expression?","which()
+e.g. which(x>5) returns indices of the values in x higher than 5"
+"What does any() and all() do?","the any() function will return true if any elements are true
+all() returns true if all elements are true"
