@@ -1,0 +1,74 @@
+"How to describe raw data (as compared to processed data)?","- the original source of the data
+- Often hard to use for data analyses
+- Data analysis  includes  processing
+- Raw data may only need to be processed once"
+"How to describe processed data (as compared to raw data)?","- Data is ready for analysis
+- Processing can include merging, subsetting, transforming, etc.
+- There may be standards for processing
+- All steps should be recorded"
+"What are the four components of tidy data?","1) the raw data
+2) a tidy data set
+3) a code book
+4) explicit and exact description of steps followed"
+"What are the four characteristics of raw data?","- No software run on the data
+- non-manipulated
+- non-removed
+- non-summarized"
+"How is tidy data presented?","- each variable in one column
+- each observation in one row
+- each kind of variable in one table
+- if several tables, one index column
+- top row include human readable variable names
+- one file per table"
+"What does the code book contain?","- information about the variables (including units!)
+- information about the summary choices made
+- information about the experimental study design used
+- In a Text file
+- Including a section called study design (how they were collected)
+- One section called Code book describing each variable and its units"
+"What does an instruction list include?","- A computer script (in R or Python)
+- the input for the script is the raw data
+- the output is the processed tidy data
+- the recipe should do everything (no tweak neede)"
+"How to check whether a directory exists?","file.exists(""directoryName"")
+
+If (!file.exists(""data"")) dir.create(""data"")"
+"How to download file on R?","download.file()
+
+(always keep track of the date when the file was downloaded)"
+"What are four important parameters of read.file / read.csv?","quote  : set whether there are any quoted values
+ na.strings  : set the character representing a missing value
+ nrows  : set the number of rows to read
+ skip  : number of lines to skip before reading the file"
+"How to read Excel files  in R?","use the xlsx package
+-->e.g. read.xlsx (""filename"", sheetIndex=1, colIndex=2:3, rowIndex=1:4)"
+"What is XML and for what is it used?","Extensible markup language (markup and content)
+
+- used to store structured data
+- widely used in Internet applications
+- basis for most web scraping"
+"How can you read XML files into R?","use the  XML package
+ then use the  xmlTreeParse (fileUrl,useInternal=TRUE) function"
+"How to extract the rootNode from an XML file?","xmlRoot() 
+
+rootNode is a wrapper"
+"How to extract the name from an XML file?","xmlName( rootNode )"
+"How to access parts of an XML document?","use rootNode [[ number of element ]] 
+
+e.g. rootNode[[1]]
+or rootNode[[1]][[1]]"
+"How to programatically extract parts of an XML file?","xmlSApply( rootNode , xmlValue )"
+"What is the difference between XML and JSON and what do they have in common?","Common : similar structure
+Different : syntax format"
+"How to extract data from a JSON file?","Use the jsonlite package, then use
+fromJSON(""url"")"
+"What do you have when extracting data from a JSON file with fromJSON()?","A data.frame!
+
+You can use the names() function to see the object names"
+"How to turn a data set ino a JSON data set?","by using toJSON()"
+"What are the advantages of data.table()?","- all functions of data.frame work on data.table
+- Written C, so much faster (at subsetting, group and updating)
+- You can use keys (useful for merging data)"
+"What happens with DT[2] (if you don't specify row AND column?","It returns the second row (in the absence of row&column it uses the number as if it was the row)"
+"How to select columns in a data.table?","e.g. for column 4:
+ DT[,4, with = FALSE]"

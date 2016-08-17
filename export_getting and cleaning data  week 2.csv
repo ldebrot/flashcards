@@ -1,0 +1,42 @@
+"What are the three structure levels of mySQL?","- database
+- table
+- field"
+"How is each row called in a MySQL database?","A record!"
+"What are the necessary steps to access a MySQL database?","1) establish connection (dbConnect)
+2) find the right table (dbListTables)
+3) have a look at the fields (dcListFields)
+4) Read the table (dbReadTable)"
+"When using MySQL, what to you have to do after connecting to a database?","disconnect!
+dbDisconnect()"
+"When using MySQL, what do you have to do after sending a query?","clear the results! E.g.:
+blabla <- dbSendQuery(table, ""SQL command"")
+dbClearResult(blabla)"
+"For what does HDF5 stand?","Hierarchical Data Format"
+"For what is HDF5 used?","- Storing large data sets
+- storing a range of data types"
+"What is the structure of an HDF file?","- Groups (containing data sets and metadata :  group header  and  group symbol table )
+- Datasets : header (name, datatype, dataspace, storage layout) and data array"
+"How do you write partially into a dataset in an HDF5 file?","By inserting an index. e.g:
+ h5write(c(10,12,11),""example.h5"",""foo/A"",index=list(1:3,1))"
+"Which are the two useful packages for Web scraping (reading from the web)?","the  httr  and  xml  packages.
+ httr:
+ html2 = GET(url)
+content2 = content(html2, as=""text"")
+parsedHtml = htmlParse(content2, asText=TRUE)
+  xml:
+  TreeParse (url, useInternalNodes=True)"
+"What is one of the advantages of the httr package (vs xml package) for web scraping?","you can  log onto websites:
+ GET(url, authenticate(""user"",""password""))
+
+and  use handles ! E.g.
+google = handle(""http://google.com"")
+pg1 = GET (handle=google, path=""/"")
+pg2 = GET (handle=google, path=""search"")
+(you don't need to login each time as authentication is managed by the handle)"
+"How to access Twitter from R?","by using the httr package:
+myapp =  oauth_app (""twitter"",key=""Consumerkey"", secret=""ConsumerSecret"")
+sig =  sign_oauth1.0 (myapp, token=""Token"",token_secret=""TokenSecret"")
+whuddeva= GET (""url"", sig)"
+"How to present data extracted from Twitter API in a data frame?","json1 =  content (extracted)
+ json2 =  jsonlite::fromJSON(toJSON( json1 )) 
+ json2 [1, 1:4] --> to show the first row and four columns"

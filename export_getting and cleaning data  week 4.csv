@@ -1,0 +1,59 @@
+"How to replace a character in a string?","By using  sub( character ,  replacingcharacter ,  stringobject )  or  gsub( character ,  replacingcharacter ,  stringobject )"
+"What is the difference between sub and gsub?","gsub replaces all characters in a string.
+sub replaces only the first occurence of the character in a string."
+"How to set characters to lower or uppercase?","- tolower()
+- toupper()"
+"How to find values in a vector?","grep(string, vector)"
+"How to return a factor indicating whether a character exists in a vector?","grepl(character, vector)
+--> returns FALSE or TRUE for each element in the vector (hence a factor)"
+"How to return values of a vector which contain a certain string?","By using  grep( character ,  vector , value=TRUE)"
+"Which package provides useful string functions?","stringr!
+
+- nchar (number of characters)
+- substr (take out part of the string)
+- paste (paste string together)
+- paste0 (paste string without any empty character
+- str_trim (cut empty spaces left and right of the string)"
+"Which are the four characteristics of great name variables?","- all lower case
+- descriptive names
+- not duplicated
+- no underscores, dots or white spaces"
+"Which are the most common metacharacters in regular expressions?","- start of a line :  ^ blablabla
+- end of a line : blablabl $
+ - character classes :  [ Bb ]  or  [ 0-9 ]  or  [ a-zA-Z ]
+ - excluding character classes :  [^ a-z.?! ]
+ - any character :  . 
+- or :   | e.g. blabla   |blublu
+- optional :  ()?
+ - repetition any number of times (even 0) :  *
+ - repetition at least one :  +  e.g.   [0-9]+ = at least one number"
+"What is the difference between the following metacharacters?
+^[Gg]ood |[Bb]ad
+^([Gg]ood   |[Bb]ad )","^[Gg]ood |[Bb]ad --> onlw ""good"" at the beginning of a line
+^([Gg]ood   |[Bb]ad ) --> both at the beginning of a line"
+"What does this regular expression mean?
+[Bb]ush( +[^ ]+ +){1,5} debate","Between B/bush and debate, a string occurs between 1 and 5 times.
+the string means : at least one empty space, followed by at least one non-empty space, followed by at least one empty space (= a word)"
+"How to express repetitions of a match in regular expressions?","the escape character followed by a number E.g. : +( [a-zA-Z]+) +\1 +"
+"In regular expressions the * is greedy. What does that mean?","It looks for the longest string possible."
+"Which package provides great date functions?","The lubridate package :
+ymd()
+mdy()
+dmy()"
+"What is the first step in dplyr after reading a csv file into a data.frame?","Use  tbl_df()  to convert it into a dplyr format"
+"Dplyr example : how to select rows from the dataset df1 where column1 is not NA?","filter(df1, !is.na(column1))"
+"In the dplyr package for what is summarize() most powerful?","Summarize() is most powerful when applied to grouped data"
+"What is grouped data?","When you break up a dataset into groups of rows based on the values of one or more variables (normal funtion : group_by)"
+"How to group a dataset by the values in a specific column?","By using  group_by( dataset ,  column )"
+"What is ""chaining"" when dealing with grouped data via dplyr?","Chaining allows you to string together multiple function calls in a way that is compact and readable, while still accomplishing the desired result.
+
+E.g. dataset %>% group_by(column) %>% summarize(newcol = mean(column)"
+"Which package provides useful functions for tidying up data?","The tidyr package!"
+"How to tidy a dataset where the header contains values (which the tidyr package)? E.g. two columns called ""male"" and ""female""","by using gather:
+gather(dataset, key=newcolumn, value=count,-okaycolumn)
+--> newcolumn will contain old variable names as values (e.g. ""male"" or ""female"")
+--> value=count means it will count the values in the former male and female coluns
+--> okaycolumn = is the one which is already tidy (not to be gathered)"
+"When tidying data with tidyr, how to  separate one column into multiple columns?","By using the  separate()  function"
+"How does the separate() function split up columns automatically?","Separate() splits on non-alphanumeric value (_ or - or : etc.)"
+"With tidyr, how to turn values of a column into columns and filling them up with the value of another column?","spread(dataframe, key=coltospread, value=coltotakevalues)"
