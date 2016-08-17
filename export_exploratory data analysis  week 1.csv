@@ -1,0 +1,62 @@
+"Principle of Analytic Graphics : what about evidence?","Evidence is always relative.
+
+ --> show comparisons!"
+"Which are the six principles of analytic graphics?","- show comparisons
+ - show causlity (mechanism
+  - show multivariate data (> 2 variables) 
+  - integrate evidence 
+  - describe evidence (tell a complete story) 
+  - content is king (present depending on content) 
+  (according to Edward Tufte)"
+"5 good reasons to use graphs in data analysis?","- understand data properties
+ - find patterns in data
+ - suggest modeling strategies
+ - debug analyses
+ - communicate results"
+"Give me 5 simple summaries of Data","- summary() 5-number summary
+ - boxplot() boxplots
+ - hist() histograms (+rug() )
+ - density plot
+ - bar plot"
+"How to change the number of bars of a histogram?","By specifying break. E.g.
+ hist(column, col = ""color"",  breaks =  100)"
+"How to add a horizontal/vertical line in a plot?","abline(h  = height ) 
+ --> specify v if to insert vertical line."
+"How to change the display of the graphic?","Set or Query Graphical Parameters"
+"Tell three 2-dimensional plots","- multiple 1-D plots (overlayed)
+ - scatterplots
+ - smooth scatterplots"
+"Tell four multi-dimensional (more than 2D) plots","- multiple 2-D plots
+ - add dimensions by adding color, size, shape
+ - spinning plots
+ - actual 3D plots (not that useful)"
+"name three plotting systems in R","Three :
+ - the base plotting system (add pieces one-by-one)
+ - the Lattice system (one single function call)
+ - the ggplot2 system (incremental but more default values)"
+"what is the ""artist's palette"" model?","you add piece by piece to the model (base plot system)"
+"which packages are in the core plotting, which ones are part of the lattice plotting system ?","base:  graphics  and  grDevices 
+ lattice:  lattice  and  grid"
+"How do you specify global graphics parameters?","with the par() function"
+"How can you show the current graphics parameters?","by using  par( ""pch"" )"
+"Name 7 base plot functions","- plot : make a scatterplot
+- lines : add lines
+- points : add points
+- texte : add text labels
+- title : add annotations
+- mtext : add texte to the margins
+- axis : add axis labels"
+"How to copy a plot? into a pdf file?","dev.copy( png ,  file=""xxx.png"" ) 
+
+ dev.copy2pdf(file="" xxx.pdf "") 
+
+don't forget to close the device! (dev.off)"
+"How to create a plot on a pdf?","- open graphics device  pdf(file = "" .... "") 
+- close graphics device  dev.off()"
+"Can you open several graphics devices?","Yes, and you can switch between gDev by using  dev.set()  and determine the currently open one by using  dev.cur()"
+"What is the Simpson's paradoxe?","Simpson's paradox , or the  Yule–Simpson effect , is a paradox in probability and statistics,  in which a trend appears in different groups of data but disappears or  reverses when these groups are combined. 
+
+It is sometimes given the  impersonal title  reversal paradox  or  amalgamation paradox."
+"With which R command do you add a title to your plot (base plot sys)?","title(main=""blabla"")"
+"Which R command to show the current plotting device?","dev.cur()"
+"Which R command to show the range of values within a numeric vector?","range(vector)"
