@@ -20,7 +20,7 @@ for (i in 1:length(list.of.packages)) library(list.of.packages[i],character.only
 
 # Send working directory to the one in which flashcardreader is located
 setwd(dirname(sys.frame(1)$ofile))
-cat("\n Working directory set to the one in which studyblue_csv_to_rda.r is located \n")
+cat("\n Working directory set to the one in which this script is located \n")
 
 # Set error messages for further use
 errmsg1 <- "ERROR 1 - This is not a correct choice - choose a number corresponding to a file"
@@ -74,6 +74,11 @@ for(i in 1:elementslength) {
     colnames(f_answer) <- (f_colnames)    
     fcards <- rbind(fcards,f_question,f_answer) # produce a clean data frame containing all content
 }
+
+## Set classes right
+fcards$type <- as.character(fcards$type)
+fcards$content <- as.character(fcards$content)
+fcards$number <- as.numeric(as.character(fcards$number))
 
 ## Save it as a RDA file
 fcrdaname <- sub(pattern=".csv",replacement=".Rda",x=fcname)
