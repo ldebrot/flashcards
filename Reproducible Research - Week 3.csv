@@ -1,0 +1,14 @@
+"DON'Ts in reproducible research","Don't...
+ - do anything by hand
+ - (use GUIs, point&click, etc.)
+ - clean data in Excel 
+
+
+- don't save output (intermediary datasets)"
+"DOs in reproducible research","- start with good science (question, material, etc.)
+- teach a computer (tell your computer to do it)
+- Use version control
+- Keep track of your software environment
+- Think about the entire pipeline
+- Set the seed (reproducible random)"
+"Does reproducibility ensure correct data analysis?","No, it doesn't tell about the correctness or validity of the analysis."

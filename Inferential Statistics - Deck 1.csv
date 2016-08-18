@@ -1,0 +1,90 @@
+"what are specificity and sensitivity in diagnostic testing?","both are about accuracy.
+ sensitivity : probability that the test says positive given that the testee has the disease
+ specificity: probability that the test says negative given that the testee does not have the disease"
+"what are the negative/positive predictive values?","positice predictive value : probability that one has (not) a disease given that the test says positive (negative)"
+"What is statistical inference?","the process of drawing conclusions ""about a population using noisy statistical data where uncertainty must be accounted for""
+--> drawing conclusions and quantifying uncertainty"
+"What is a statistic?","A number computed from a sample of data"
+"What does a probability mass function (PMF) do?","It provides the probability of one discrete value to be the outcome."
+,"It provides the probability of a mass of  continuous  values to be the outcome."
+"What does the cumulative distribution function do?","It calculates the probability that X is less than or equal to x."
+"What is the relation between the PDF and the CDF?","the CDF is the integral of the PDF.
+the PDF is the derivative of the CDF."
+"What is the difference between a population mean and a sample mean?","A sample median is an estimator of a population median (the estimand)"
+"Bayes' formula about positive predictive value?","P(D|+) = P(+|D) * P(D) / ( P(+|D) * P(D) + P(+|~D) * P(~D) )"
+"What does iid mean?","Independent and identically distributed"
+"What is a consistent estimator?","An estimator which converges to what it is trying to estimate."
+"How do you ""properly normalize"" a distribution?","You substract the population mean from the sample mean and divide the difference by the standard error (sigma/sqrt(n))"
+"What does the Central Limit Theorem say about distribution of averages of iid variables?","The distribution of averages of iid variables (properly normalized) becomes that of a standard normal as the sample size increases."
+"What does the Central Limit Theorem say about normalized variables?","They are almost normally distributed with mean 0 and variance 1 (provided that n is a large number)"
+"Does the original population have to be normally distributed in order for the CLT to apply?","No. We can assume normality of a sample mean, no matter what kind of original population we have, as long as the simple size is large enough (>30) and the samples independent (=< 10% of population)."
+"What is the Wald Interval?","It helps estimate the Confidence Interval of a binomial distribution (p +/- qnorm(xxx) * sqrt(p * (1-p)/n).Definition"
+"What is the Agresti/Coull Interval?","A quick fix to the problem of having a small n when trying to estimate the Confidence Interval. This simply means we add 2 successes and 2 failures to the counts when calculating the proportion."
+"In a Poisson distribution, what is lambda?","Lambda is the expected count per unit of time"
+"In a Poisson distribution, say you monitor the events during time span X, what do you do with lambda?","Lambda = event_rate * X (the event rate is multiplied by number of time units)"
+"What is the formula for calculating the variance?","Var(X)=E[(X−μ) 2 ]=E[X 2 ]−E[X] 2 .
+
+Because μ = E[X]"
+"Does t distribution assume normality?","Yes, it does but is robust to this assumption within limits."
+"What is the formula for calculating the Confidence interval of a t distribution?","mean(X) + c(-1,1) * qt(%, df) * sd/sqrt(n)"
+"what is the formula to pool variances?","(((nA-1)*varA)+((nB-1)*varB)))/(nA + nB - 2)"
+"How do you check whether the null hypothesis can be rejected?","To reject H0, the Z-score of the difference in means must exceed 1.645 (normal quantile for .95 probability)
+
+1.645 < (X - y0)/(s/sqrt(n))"
+"Is statistical significance equal to scientific significance?","No."
+"For what are p-values useful?","To communicate the results of a hypothesis test."
+"How do you define the p-value?","The probability of getting data as or more extreme than the observed data in favor of the alternative assuming that H 0  is true."
+"Which question do p-values answer?","How likely would it be to get a statistic this large or larger if the null was actually true?"
+"Which formula is correct for calculating the probability of 4 or more heads out of 9 coin flips?","pbinom( q=3 ,size=9,prob=.5,lower.tail = FALSE)"
+"What is the general rule for rejection?"," sqrt(n) * ( X' - mu) / s > Z_{1-alpha}"
+"What does Power means?","The term POWER refers to the quantity  1-beta  and it represents the  probability of rejecting H_0 when it's false .
+It is used to determine appropriate sample sizes in experiments."
+"When hypothesis testing, you have a  t statistic  of 2.5 in a t-distribution of 15 degrees of freedom. H_a says mu_a > mu_0. What is the probability of having a t-stat this big assuming H_0=T?","pt(q=2.5, df=15, lower.tail=FALSE)"
+"What is p-value from the standpoint of an attained significance level?","The p-value is the smallest value of alpha at which you will reject the null hypothesis."
+"Does sample size matter for sampling distributions of the mean to be normal ?","No, sample size does not matter.
+ Sample observations have to be independent and je me from a nearly normal distribution."
+"what are the two conditions for using the t-distribution for inference on a sample mean?","1) independence of observations
+ 2) observations come from a nearly normal distribution"
+"When can you relax the conditions for using the t-distribution ?","The distribution might be moderately skewed (rather than totally normal) if the sample size exceeds 30."
+"A point estimate is  unbiased  if...","...the sampling distribution is centeted around the parameter it estimates."
+"When apply NON-normal point estimates?","- sample size too small
+ - standard error estimate poor
+ - point estimate tends towards a non-normal distribution"
+"Under which conditions the sampling distribution is normal?","- sample size > 30
+ - random sampling used"
+"How do you calculate the margin of error?","Divide the confidence interval by two (min - max / 2)"
+"What exactly are paired data?","Two sets of observations are paired if each observation in one set has a special correspondence or connection with exactly ome observation in the other data set."
+"Which question does power answer?","what is the probability that we detect a certain effect.
+
+ 
+(the effect of interest is first to be defined)"
+"What is the privileged range of power?","between 80% and 90%"
+"Which are the three conditions on the data to be met before performing ANOVA?","- observations are independent within and across groups
+- data nearly normal in each group
+- variability across groups about equal"
+"Which are the hypotheses of ANOVA?","H_0_ANOVA: means are equal across groups
+H_A_ANOVA: at least one mean is different"
+"What is called data snooping or data fishing?","When one does informal testing (by eye) and then decide which data to test formally."
+"What is the Bonferroni correction?","The Bonferroni correction suggests that a more stringent significance level is more appropriate for multiple comparisons (instead of alpha: alpha/K, where K = k(k-1)/2)"
+"Name three error rates","1) false positive (false results are called significant)
+2) family wise error (at least one false positive)
+3) false discovery rate (claims of significance are false)"
+"How can you control the false positive rate?","Call all results with p-value under alpha significant."
+"How can you control the family-wise error rate?","Process with all hypothesis tests with regular  p-value .
+Then, divide  alpha  by the number nh of hypothesis tests performed and call all tests with  p-value   significant."
+"How do you control false discovery rate (FDR)?","- calculate p-values normally
+- order p-values from smallest to largest
+- call  alpha * rank/m  (with rank = position in the order and m = number of tests)"
+"Which are the two general options to control false positives?","1) adjust the alpha level
+2) adjust p-values (which are no longer p-values)"
+"Which R function can you use to adjust p-values?","p.adjust( pValues, method )"
+"What is resampling?","Resampling based procedures are ways to perform population based statistical inferences, while living within our data."
+"For what is bootstraping useful?","For constructing confidence intervals and medians of difficult statistics"
+"What is bootstrapping?","Simulating a distribution from a statistic (e.g. mean) from empirical data (e.g. sampling distribution of the mean based on only one sample)"
+"Why use bootstraping?","When you do not have any information about the population (no parameter)"
+"What do permutation tests do?","Creates a null distribution by resampling from the response with replacement."
+"Why use permutation test? Instead of what?","To determine whether mean differences are statistically significant.
+Instead of T-test, only for normal distributions."
+"Which questions to ask in order to choose the right test?","1  Data : nominal or ratio/interval?
+2  Sample : one or two samples? one sample with two measures?
+3 Purpose: relationship?"

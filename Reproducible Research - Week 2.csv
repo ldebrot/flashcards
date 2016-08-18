@@ -1,0 +1,46 @@
+"Which are the four basic standards in R coding?,""- indenting (4 - 8 spaces)"
+ - maximum width of 80 chr
+ - one function per logical step
+" - use a text editor"""
+"What is Markdown?,""Markdown is a text-to-html conversion tool for web writers"""
+"Three good reasons for using Markdown?,""- Focus on writing (vs formatting)"
+ - simple intuitive formatting elements
+"- easily converted to valid HTML"""
+"What is R Markdown?,""Integration of R code with markdown"
+"= great tool for literate programming"""
+"Three good reasons for using R Markdown?,""- allows to create documents containing """"live"""" code"
+- R code is evaluated as part of the processing of the markdown
+"- Results form R code are inserted into markdown document"""
+"Which package allows to convert R markdown into markdown?,""The knitr package"""
+"Which package allos to convert markdown into HTML?,""The markdown package"""
+"How to convert R markdown into slides?,""with the slidify package"""
+"Weave vs Tangle (what is what?),""Weave = human-readable documents"
+"Tangle = machine-readable documents"""
+"Which languages uses Sweave?,""LaTeX as a documentation language and R as a programming language"""
+"How do you make your work reproducible?,""- keep track of things (version control system)"
+ - use software whose operation can be coded
+- Don't save output
+"- Save data in non-proprietary formats"""
+"What is knitr good for?,""- manuals"
+ - short/medium-length technical documents
+ - tutorials
+ - reports
+"- data preprocessing documents/summaries"""
+"What is knitr bad for?,""Kntir is not appropriate for"
+ - very long research articles
+ - complex time-consuming computations
+"- documents requiring precise formatting"""
+"How to convert R markdown into HTML by code?,""library(knitr)"
+setwd( )
+"knit2html(""""document.Rmd"""")"
+"browseURL(""""document.html"""")"""
+"In which steps does knitr convert R markdown into html?,""Rmd -> md -> html"
+
+"(never modify the md file as the changes will be overriden by knitr)"""
+"How to disable echo and hide results in Rmd?,""{r echo=FALSE,results=""""hide""""}"""
+"What happens to the images in a knitr-produced html file?,""Images are emb edded in the html file (in base64 format)"""
+"How to set global options for every code chunk in Rmd?,""create a separate code chunk in the beginning of the document:"
+"opts_chunk$set(echo=FALSE, results=""""hide"""")"""
+"How to set figure format in Rmd?,""fig.height = "
+"fig.width ="""
+"How to avoid computing the whole document each time?,""set cache=TRUE (by chunk-by-chunk basis to store results of computation)"""

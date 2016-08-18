@@ -1,174 +1,174 @@
-"""What is R?"",""R is an implementation of the S language developed by Chambers at Bell Labs."""
-"""Which are the five atomic classes of objects in R?"",""1 - characters"
+"What is R?","R is an implementation of the S language developed by Chambers at Bell Labs."
+"Which are the five atomic classes of objects in R?","1 - characters
 2 - numeric
 3 - integer
 4 - complex
-"5 - logical"""
-"""A vector can contain objects of how many classes?"",""Only one."
-"Except for a list, which is represented as a vector but can contain objects of different classes"""
-"""Which function creates an empty vector?"",""R command : vector()"
-"E.g. x <- vector (""""numeric"""", length = 10)"""
-"""How to specify that a number is an integer?"",""You need to add the L suffix."
-"E.g. 1L for one"""
-"""What is a NaN?"",""It is  N ot  a   N umber (undefined or missing)"""
-
-
-
-
-
-"""Which R command allows you to modify the attributes of an R object?"",""The R function attributes()"""
-"""Which is the concactenating R command creating vectors of objects?"",""c()"
-"E.g. c(0.5, 0.6) or c(""""a"""", """"b"""", """"c"""")"
-"or 9:25"""
-"""What happens if you mix object classes within a vector?"",""Coercion  occurs --> conversion of all values into one class."""
-"""How can you explicitly coerce objects within a vector?"",""use as.numeric(x)"
+5 - logical"
+"A vector can contain objects of how many classes?","Only one.
+Except for a list, which is represented as a vector but can contain objects of different classes"
+"Which function creates an empty vector?","R command : vector()
+E.g. x <- vector (""numeric"", length = 10)"
+"How to specify that a number is an integer?","You need to add the L suffix.
+E.g. 1L for one"
+"What is a NaN?","It is  N ot  a   N umber (undefined or missing)"
+"Which are possible attributes of R objects?","- names, dimnames
+- dimensions
+- class
+- length
+- other user-defined attributes"
+"Which R command allows you to modify the attributes of an R object?","The R function attributes()"
+"Which is the concactenating R command creating vectors of objects?","c()
+E.g. c(0.5, 0.6) or c(""a"", ""b"", ""c"")
+or 9:25"
+"What happens if you mix object classes within a vector?","Coercion  occurs --> conversion of all values into one class."
+"How can you explicitly coerce objects within a vector?","use as.numeric(x)
 as.integer(x)
-"as.logical(x)"""
-"""What happens in case of nonsensical coercions?"",""You obtain """"NA"""" values."""
-"""How to create a matrix?"",""m <- matrix(nrow = 2, ncol = 3)"""
-"""How to show the dimension of a matrix?"",""dim(m)"""
-"""How are matrices constructed? Column-wise or row-wise?"",""Matrices are constructed column-wise"
+as.logical(x)"
+"What happens in case of nonsensical coercions?","You obtain ""NA"" values."
+"How to create a matrix?","m <- matrix(nrow = 2, ncol = 3)"
+"How to show the dimension of a matrix?","dim(m)"
+"How are matrices constructed? Column-wise or row-wise?","Matrices are constructed column-wise
+
 E.g. m <- matrix (1:6, nrow = 2, ncol = 3)
 1 3 5
-"2 4 6"""
+2 4 6"
+"How can one create matrices out of vectors?","m <- 1:0
+dim(m) <- c(2,5)"
+"How can one bind columns or rows into a matrix?","by using cbind(x, y) or rbind(x, y)"
+"For what are factors used?","To represent categorical data : each integer has a labe.
+E.g. 1 stands for male, 2 for females, etc."
+"How can one bring down factors from their label values to their integer values?","by using unclass(x)
+where factor(x(""male"", ""female"", ""male"")) becomes x(1, 2, 1)"
+"How can one set the order of levels within factors?","by using the levels argument
+E.g. x <- factor(c(""yes"", ""yes"", ""no"", ""yes""), levels = c(""yes"", ""no""))"
+"Do have NA values a class?","Yes NA values have a class (integer, character, etc.)"
+"Is a NA value necessarily a NaN value?","No, but a NaN value is necessarily a NA value
 
-"""How can one create matrices out of vectors?"",""m <- 1:0"
-"dim(m) <- c(2,5)"""
-"""How can one bind columns or rows into a matrix?"",""by using cbind(x, y) or rbind(x, y)"""
-"""For what are factors used?"",""To represent categorical data : each integer has a label."
-"E.g. 1 stands for male, 2 for females, etc."""
-"""How can one bring down factors from their label values to their integer values?"",""by using unclass(x)"
-"where factor(x(""""male"""", """"female"""", """"male"""")) becomes x(1, 2, 1)"""
-"""How can one set the order of levels within factors?"",""by using the levels argument"
-"E.g. x <- factor(c(""""yes"""", """"yes"""", """"no"""", """"yes""""), levels = c(""""yes"""", """"no""""))"""
-"""Do have NA values a class?"",""Yes NA values have a class (integer, character, etc.)"""
-"""Is a NA value necessarily a NaN value?"",""No, but a NaN value is necessarily a NA value"
-
-"NA:NaN+NA"""
-"""For what are used data frames?"",""To store tabular data"""
-"""What is the difference between a matrix and a data frame?"",""Data frames can store different classes of objects in each column (like a list)"""
-"""How can one create a data frame?"",""By the R commands:"
+NA:NaN+NA"
+"For what are used data frames?","To store tabular data"
+"What is the difference between a matrix and a data frame?","Data frames can store different classes of objects in each column (like a list)"
+"How can one create a data frame?","By the R commands:
 data.frame()
 read.table()
 read.csv()
 
-"E.g. x <- data.frame(foo = 1:4, bar = c(T, T, F, F))"""
-"""How can data frames be converted into a matrix?"",""R command:"
-"data.matrix()"""
-"""How can one name R objects?"",""There are different functions used to name elements in an object."
+E.g. x <- data.frame(foo = 1:4, bar = c(T, T, F, F))"
+"How can data frames be converted into a matrix?","R command:
+data.matrix()"
+"How can one name R objects?","There are different functions used to name elements in an object.
 
-"For vectors = names(x) <- (""""element one"""", """"element two"""")"
+For vectors = names(x) <- (""element one"", ""element two"")
 For lists = list(mama = 132, hulu = 34098, joul = 845)
-"For Matrices = dimnames(m) <- list(c(""""row one"""", """"row two""""), c(""""column one"""", """"column two""""))"
+For Matrices = dimnames(m) <- list(c(""row one"", ""row two""), c(""column one"", ""column two""))
 By using the function names()
 
 This is true for all R objects.
-"You can give a name to each element in the vector"""
-"""How to read tabular data?"",""functions"
+You can give a name to each element in the vector"
+"How to read tabular data?","functions
 read.table()
 read.csv()
-"--> put the info into a data frame"""
-"""How to read a text file in R?"",""function readLines()"
-"for reading lines of a text file"""
-"""How to read R code files?
-How to read deparsed R code files?"",""function"
+--> put the info into a data frame"
+"How to read a text file in R?","function readLines()
+for reading lines of a text file"
+"How to read R code files?
+How to read deparsed R code files?","function
 source() for reading R code files
-function
-"dget() for reading de-parsed R code files"""
-"""How to read binary objects into R?"",""function"
+funtion
+dget() for reading de-parsed R code files"
+"How to read binary objects into R?","function
 load() for reading single Robjects in binary form
-"(load for reading them into saved workspaces)"""
-"""Which are the ""writing"" equivalents of the ""reading"" functions?"",""read.table == write.table"
+(load for reading them into saved workspaces)"
+"Which are the ""writing"" equivalents of the ""reading"" functions?","read.table == write.table
 readLines == writeLines
 source == dump
 dget == dput
 load == save
-"unserialize == serialize"""
-"""Which are the most important arguments of the read.table function?"",""file = name of a file"
+unserialize == serialize"
+"Which are the most important arguments of the read.table function?","file = name of a file
 header = true/false indicating whether the file has a header line
-"sep = a string indicating how the columns are separated (e.g. """")"
+sep = a string indicating how the columns are separated (e.g. "";"")
 colClasses = a character vector indicated the class of each column in the dataset
 nrows = the numer of rows in the dataset (not required)
 comment.char = a character string indicating which characters marks a comment (e.g. #)
 skip = number of initial lines to be skipped during the process (not required)
-"stingsAsFactors = default is true - should character variables be coded as factors?"""
-"""If you specify only the filename in the read.table() function, what happens to the other arguments?"",""- skip lines beginning with a """"#"""""
-
+stingsAsFactors = default is true - should character variables be coded as factors?"
+"If you specify only the filename in the read.table() function, what happens to the other arguments?","- skip lines beginning with a ""#""
+- figure out how many rows there are
 - figure what type of variable is in each column (specifying this argument makes R run faster and more efficiently)
-"- default separator is a space"""
-"""What is the difference between read.table and read.csv?"",""read.csv is identical to read.table except that the default separator is a comma"""
-"""How to determine whether a dataset is too large for your computer?"",""You need to check the size of the dataset and compare it to the RAM memory available on your PC."
-"R loads the dataset into your RAM while reading (read.table)"""
-"""How can you speed up the process of reading large datasets?"",""- If the file does not contain any comments, you can set the comment.char = """""""""
-#NOM?
+- default separator is a space"
+"What is the difference between read.table and read.csv?","read.csv is identical to read.table except that the default separator is a comma"
+"How to determine whether a dataset is too large for your computer?","You need to check the size of the dataset and compare it to the RAM memory available on your PC.
+R loads the dataset into your RAM while reading (read.table)"
+"How can you speed up the process of reading large datasets?","- If the file does not contain any comments, you can set the comment.char = """"
+- define classtypes of the columns (colClasses)
 - determine the classtypes of the first 100 columns automatically and the apply the classtypes to all columns : sapply(initial, class)
-"- set nrows doesn't make R run faster but it helps with memory usage."""
-"""What is the advantage of using dump and dput rather than read.table or read.csv?"",""dump and dput preserve the metadata in the file."""
-"""What are the advantages of textual formats?"",""- metadata (dump and dput)"
-#NOM?
-#NOM?
-#NOM?
-"- adhere to the Unix philosophy"""
-"""What are the downsides of textual formats?"",""Textual formats are not very space-efficient"""
-"""Which function can be used to reconstruct an R object?"",""Use dput to write the data.frame into a file (deparse the R object), than dget (parse the R object) it out of the file to have back in R."""
-"""What is the difference between dput/dget and dump/source?"",""Dput/dget can be used to deparse a single object."
-"Dump/source can be used to read back (parse) multiple R objects."""
-"""How to remove objects in R?"",""use rm(name1, name2, etc.)"""
-"""Which functions can be used to open connections to a file, a file compressed with gzip, a file compressed with bzip2 and to a webpage?"",""file = file"
+- set nrows doesn't make R run faster but it helps with memory usage."
+"What is the advantage of using dump and dput rather than read.table or read.csv?","dump and dput preserve the metadata in the file."
+"What are the advantages of textual formats?","- metadata (dump and dput)
+- they are editable
+- work better with version control programs
+- can be longer-lived (in case of curroption of the file)
+- adhere to the Unix philosophy"
+"What are the downsides of textual formats?","Textual formats are not very space-efficient"
+"Which function can be used to reconstruct an R object?","Use dput to write the data.frame into a file (deparse the R object), than dget (parse the R object) it out of the file to have back in R."
+"What is the difference between dput/dget and dump/source?","Dput/dget can be used to deparse a single object.
+Dump/source can be used to read back (parse) multiple R objects."
+"How to remove objects in R?","use rm(name1, name2, etc.)"
+"Which functions can be used to open connections to a file, a file compressed with gzip, a file compressed with bzip2 and to a webpage?","file = file
 gzfile = gzip
 bzfile = bzip2
-"url = webpage"""
-"""Which are the arguments of the file() function?"",""description = """"name of the file"""""
-"open with the flags """"r"""" or """"w"""" or """"a"""" (combinable)"
+url = webpage"
+"Which are the arguments of the file() function?","description = ""name of the file""
+open with the flags ""r"" or ""w"" or ""a"" (combinable)
 blocking = T/F
-"encoding = getOption(""""encoding"""")"""
-"""When are using connections useful rather than going for read.table or read.csv?"",""When you want to read/write part of a file"""
-"""How to read the first/last lines of a vector/file?"",""e.g. head(object, 10)"
-"e.g. tail(object, 4)"""
-"""How to subset the first two elements of 
-x <- c(""a"", ""b"", ""c"")?"",""x[1:2] or x[1,2]"
-"or x[x < """"c""""]"
-"or u <- x < """"c"""", then x[u]"""
-"""In subsetting, what is the difference between single and double brackets?"",""single bracket returns an object of the same class"
+encoding = getOption(""encoding"")"
+"When are using connections useful rather than going for read.table or read.csv?","When you want to read/write part of a file"
+"How to read the first/last lines of a vector/file?","e.g. head(object, 10)
+e.g. tail(object, 4)"
+"How to subset the first two elements of 
+x <- c(""a"", ""b"", ""c"")?","x[1:2] or x[1,2]
+or x[x < ""c""]
+or u <- x < ""c"", then x[u]"
+"In subsetting, what is the difference between single and double brackets?","single bracket returns an object of the same class
 
-"double bracket can return an object of a different class."""
-"""How to subset an element by order (its place)?
-How to subset an element by its name?"",""By order:  "
+double bracket can return an object of a different class."
+"How to subset an element by order (its place)?
+How to subset an element by its name?","By order:  
 by x[1]
 or x[[1]]
 
   By name:  
 x$bar
-"or x[[""""bar""""]]"""
-"""Which operators/functions can be used to subset/extract multiple elements?"",""single brackets  for  multiple elements . E.g. x[1:3]"
+or x[[""bar""]]"
+"Which operators/functions can be used to subset/extract multiple elements?","single brackets  for  multiple elements . E.g. x[1:3]
 
  double brackets  or dollar sign for  single elements. 
 
 BUT
 
 double brackets can take an integer sequenec indicating the row- and columnnumber of the element.  in a list 
-"E.g. x[[1][3]] or x[[x(1,3)]]"""
-"""Which subset operator can be used for computed indeces, which ones for literal names?"",""double brackets for computed indices. E.g. "
-"name <- """"foo"""""
+E.g. x[[1][3]] or x[[x(1,3)]]"
+"Which subset operator can be used for computed indeces, which ones for literal names?","double brackets for computed indices. E.g. 
+name <- ""foo""
 x[[name]]
 
 Versus dollar sign:
-"x¨$foo"""
-"How to subset a matrix?,""x   3"
+x¨$foo"
+"How to subset a matrix?","x   3
 x[2, 1] ===> 2
 indices can also be missing:
-"x[,2] ===> 3 4"""
-"""How can one subset a matrix using single brackets and indices  and , by doing so, receive a matrix (2D object)?"",""set drop = FALSE (default is true)"
-"E.g. x[,1, 2, drop = False]"""
-"""How do [[ and $ behave with partial matching?"",""In $ the partial matching is on by default"
+x[,2] ===> 3 4"
+"How can one subset a matrix using single brackets and indices  and , by doing so, receive a matrix (2D object)?","set drop = FALSE (default is true)
+E.g. x[,1, 2, drop = False]"
+"How do [[ and $ behave with partial matching?","In $ the partial matching is on by default
 
 In [[, one need to add exact = false to have partial matching. E.g.
-"x[[""""a"""", exact = FALSE]]"""
-"""How to remove NA values by subsetting?"",""x <- c(1, 2, NA, 4, NA, 5)"
+x[[""a"", exact = FALSE]]"
+"How to remove NA values by subsetting?","x <- c(1, 2, NA, 4, NA, 5)
 bad <- is.na(x)
 good <- x[!bad]
 
-"(Bad is False, False, True, False, True, False)"""
-"""How to subset an object without missing values?"",""good  complete.cases( x,y ) "
+(Bad is False, False, True, False, True, False)"
+"How to subset an object without missing values?","good  complete.cases( x,y ) 
 
-"good is a logical vector (True, false, false, etc.)"""
+good is a logical vector (True, false, false, etc.)"

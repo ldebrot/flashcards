@@ -1,0 +1,8 @@
+"What is the aim of inferential statistics?","Generating conclusions about a population from a noisy sample."
+"What's the difference between discrete and continuous random variables?","discrete = distinct or separate values
+continuous = any value in an interval (even infinite)"
+"Which function to use with discrete and continuous random values respectively?","Probability mass function = discrete
+Probability density function = continuous"
+"How to validate a probability density function?","The total value (surface of the distribution graph) has to be equal to one."
+"What does the cumulatif distribution function provide?T","The probability of the value being less or equal to x (like cutting a slice in a function and calculate the size of the slice)"
+"What does the survival function give?","It gives the probability of a value being above x."

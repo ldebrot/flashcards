@@ -1,0 +1,7 @@
+"how to define reproducible research?","make analytic data and code available so that others may reproduce findings"
+"which parts of the analysis should be made available in order to ensure reproducibility?","- data & metadata
+ - computer code (including all steps from measured data > analytic data > computed data)
+ - documentation if code and data
+ - standard means of distribution"
+"What is literate (statistical) programming?","Literate programming combines human-readable (documentation) and machine-readable text (code)"
+"Which R package allows to do literatr programming?","knitr package"
