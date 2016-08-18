@@ -108,8 +108,8 @@ while (length(f_order)>0) {
     # If input = c
     if(x=="c") f_successes <- f_successes +1 # increase success count
 
-    # If input = n
-    if(x=="n") f_order <- c(f_order,f_current) # put the question back in the deck
+    # If input = f
+    if(x=="f") f_order <- c(f_order,f_current) # put the question back in the deck
     
     # If input = s
     if(x=="s") f_skipped <- f_skipped +1 # increase skip count
@@ -117,3 +117,5 @@ while (length(f_order)>0) {
     # If exit
     if(x=="q"||x=="exit") byebye()
 }
+
+byebye()
